@@ -1,9 +1,31 @@
-console.log("E-Commerce Website Loaded");
+ console.log("JS working");
+// cart count
+let cartCount = 0;
+const cartCountEl = document.getElementById("cartCount");
 
-// Hamburger toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const productGrid = document.getElementById("productGrid");
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+// fetch products
+fetch("https://fakestoreapi.com/products")
+  .then(res => res.json())
+  .then(products => {
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      card.innerHTML = `
+        <img src="${product.image}" loading="lazy">
+        <h3>${product.title}</h3>
+        <p class="price">₹ ${product.price}</p>
+        <button>Add to Cart</button>
+      `;
+
+      card.querySelector("button").addEventListener("click", () => {
+        cartCount++;
+        cartCountEl.textContent = cartCount;
+      });
+
+      productGrid.appendChild(card);
+    });
+  })
+  .catch(err => console.error(err));

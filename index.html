@@ -1,92 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Frontend</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to DAAS Store</h1>
-    </header>
-    <script src="scripts/app.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Header</title>
+  <meta charset="UTF-8">
+  <title>DAAS Online Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
 
-    <!-- Font Awesome (icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- HEADER START -->
-    <header class="header">
+<!-- HEADER -->
+<header class="header">
 
-        <!-- Logo -->
-        <div class="logo">
-            ShopMate
-        </div>
+  <div class="logo">DAAS Online Shop</div>
 
-        <!-- Navigation Menu -->
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <!-- Right Section -->
-        <div class="header-right">
+  <!-- CART -->
+  <div class="cart">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cartCount">0</span>
+  </div>
 
-            <!-- Search Bar -->
-            <div class="search-box">
-                <input type="text" placeholder="Search products...">
-                <i class="fas fa-search"></i>
-            </div>
+</header>
 
-            <!-- Cart Icon -->
-            <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">3</span>
-            </div>
-
-            <!-- Hamburger Menu -->
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-
-        </div>
-
-    </header>
-    <!-- HEADER END -->
-
-    <!-- JS -->
-    <script src="scripts/app.js"></script>
-
-</body>
-</html>
-<!-- HERO SECTION START -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>stock clearence sale!</h1>
-        <p>
-            All laptops,mobiles accessories,case are avaible 
-            Up to 50% off accessories
-            Grab soon.....</p>
-        <p> for more info contact : 7741494183</p>
-        <a href="#products" class="hero-btn">Shop Now</a>
-    </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Stock Clearance Sale!</h1>
+    <p class="offer">Up to 50% off accessories</p>
+    <p class="hero-text">
+      We have all electronics items, men's accessories, and fashion clothes.
+      Grab soon…!!!!
+    </p>
+    <a href="#products" class="hero-btn">Shop Now</a>
+  </div>
 </section>
-<!-- HERO SECTION END -->
+
+<!-- PRODUCTS -->
+<h1 class="heading" id="products">Products</h1>
+<div class="product-grid" id="productGrid"></div>
+
+<!-- ABOUT -->
+<section id="about" class="info-section">
+  <h2>About Us</h2>
+  <p>
+    DAAS Online Shop provides electronics items, men's accessories, and fashion
+    products at affordable prices. We focus on quality and customer satisfaction.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="info-section">
+  <h2>Contact Us</h2>
+  <p>📞 Phone: 7741494183</p>
+  <p>📧 Email: daasonlineshop@gmail.com</p>
+</section>
+
+<!-- JS -->
+<script src="scripts/app.js"></script>
+</body>
+</html>
