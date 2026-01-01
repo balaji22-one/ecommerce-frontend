@@ -10,9 +10,9 @@ fetch("https://fakestoreapi.com/products")
   .then(res => res.json())
   .then(products => {
     products.forEach(product => {
-      const card = document.createElement("div");
+      const card = document.createElement("a");
       card.className = "product-card";
-
+      card.href = `product.html?id=${product.id}`;
       card.innerHTML = `
         <img src="${product.image}" loading="lazy">
         <h3>${product.title}</h3>

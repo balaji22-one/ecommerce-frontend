@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">DAAS Online Shop</div>
+
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cartCount">0</span>
+  </div>
+</header>
+
+<!-- PRODUCT DETAIL -->
+<section class="product-detail">
+
+  <!-- IMAGE -->
+  <div class="zoom-container">
+    <img id="productImage" alt="Product Image">
+  </div>
+
+  <!-- INFO -->
+  <div class="detail-info">
+    <h2 id="productTitle"></h2>
+    <p id="productDescription"></p>
+
+    <p>Price: ₹ <span id="totalPrice"></span></p>
+
+    <!-- COLOR -->
+    <label>Color:</label>
+    <select id="colorSelect">
+      <option value="Black">Black</option>
+      <option value="Blue">Blue</option>
+      <option value="red">red</option>
+    </select>
+
+    <!-- SIZE -->
+    <label>Size:</label>
+    <select id="sizeSelect">
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+    </select>
+
+    <!-- QUANTITY -->
+    <div class="qty-box">
+      <button id="minus">−</button>
+      <span id="qty">1</span>
+      <button id="plus">+</button>
+    </div>
+
+    <p>Total Price: ₹ <span id="totalPrice"></span></p>
+
+    <button id="addToCart">Add to Cart</button>
+  </div>
+
+</section>
+
+<!-- TOAST MESSAGE -->
+<div id="toast"></div>
+
+<script src="scripts/product.js"></script>
+</body>
+</html>
